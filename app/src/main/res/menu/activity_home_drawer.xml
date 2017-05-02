@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_rent"
+            android:icon="@drawable/ic_action_key"
+            android:title="@string/home_nav_rent" />
+        <item
+            android:id="@+id/nav_customer"
+            android:icon="@drawable/ic_action_client"
+            android:title="@string/home_nav_customer" />
+        <item
+            android:id="@+id/nav_cars"
+            android:icon="@drawable/ic_action_car"
+            android:title="@string/home_nav_cars" />
+
+    </group>
+
+</menu>
