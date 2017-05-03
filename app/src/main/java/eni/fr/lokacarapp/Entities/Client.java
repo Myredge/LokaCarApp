@@ -1,7 +1,5 @@
-package Entities;
+package eni.fr.lokacarapp.Entities;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.provider.ContactsContract;
 
 import java.io.Serializable;
@@ -14,7 +12,7 @@ public class Client implements Serializable{
 
     private String strNom, strPrenom, strAdresse, strVille, strTel;
     private int nIdClient, nCodePostale;
-    private ContactsContract.CommonDataKinds.Email email;
+    private String Email;
 
 
     public String getStrNom() {
@@ -73,15 +71,15 @@ public class Client implements Serializable{
         this.nCodePostale = nCodePostale;
     }
 
-    public ContactsContract.CommonDataKinds.Email getEmail() {
-        return email;
+    public String getEmail() {
+        return Email;
     }
 
-    public void setEmail(ContactsContract.CommonDataKinds.Email email) {
-        this.email = email;
+    public void setEmail(String email) {
+        this.Email = email;
     }
 
-    public Client(String strNom, String strPrenom, String strAdresse, String strVille, String strTel, int nCodePostale, ContactsContract.CommonDataKinds.Email email)
+    public Client(String strNom, String strPrenom, String strAdresse, String strVille, String strTel, int nCodePostale, String email)
     {
         this.strNom = strNom;
         this.strPrenom = strPrenom;
@@ -89,7 +87,7 @@ public class Client implements Serializable{
         this.strVille = strVille;
         this.nCodePostale = nCodePostale;
         this.strTel = strTel;
-        this.email = email;
+        this.Email = email;
     }
 
 }

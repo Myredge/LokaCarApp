@@ -14,7 +14,7 @@ import eni.fr.lokacarapp.Activities.Home.HomeActivity;
 import eni.fr.lokacarapp.R;
 
 /**
- * A login screen that offers login via email/password.
+ * A strLogin screen that offers strLogin via email/password.
  */
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_login);
-        // Set up the login form.
+        // Set up the strLogin form.
         mEmailView = (EditText) findViewById(R.id.email);
         mPasswordView = (EditText) findViewById(R.id.password);
 

@@ -1,7 +1,4 @@
-package Entities;
-
-import android.os.Parcel;
-import android.os.Parcelable;
+package eni.fr.lokacarapp.Entities;
 
 import java.io.Serializable;
 
@@ -11,17 +8,17 @@ import java.io.Serializable;
 
 public class Agence implements Serializable{
 
-    public int IdAgence;
+    public int nIdAgence;
     public String strNom, strLogin, strMdp;
     public float fChiffreAffaire;
 
 
     public int getnIdAgence() {
-        return IdAgence;
+        return nIdAgence;
     }
 
     public void setnIdAgence(int nIdAgence) {
-        this.IdAgence = nIdAgence;
+        this.nIdAgence = nIdAgence;
     }
 
     public String getStrNom() {

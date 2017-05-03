@@ -1,7 +1,4 @@
-package Entities;
-
-import android.os.Parcel;
-import android.os.Parcelable;
+package eni.fr.lokacarapp.Entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,34 +9,34 @@ import java.util.Date;
 
 public class Location implements Serializable{
 
-    private Agence agence;
-    private Car car;
-    private Client client;
+    private Agence Agence;
+    private Car Car;
+    private Client Client;
     private Date dateDebutLocation, dateFinLocation;
 
 
     public Agence getAgence() {
-        return agence;
+        return Agence;
     }
 
     public void setAgence(Agence agence) {
-        this.agence = agence;
+        this.Agence = agence;
     }
 
     public Car getCar() {
-        return car;
+        return Car;
     }
 
     public void setCar(Car car) {
-        this.car = car;
+        this.Car = car;
     }
 
     public Client getClient() {
-        return client;
+        return Client;
     }
 
     public void setClient(Client client) {
-        this.client = client;
+        this.Client = client;
     }
 
     public Date getDateDebutLocation() {
@@ -60,9 +57,9 @@ public class Location implements Serializable{
 
 
     public Location(Agence agence, Car car, Client client, Date dateDebutLocation, Date dateFinLocation) {
-        this.agence = agence;
-        this.car = car;
-        this.client = client;
+        this.Agence = agence;
+        this.Car = car;
+        this.Client = client;
         this.dateDebutLocation = dateDebutLocation;
         this.dateFinLocation = dateFinLocation;
     }

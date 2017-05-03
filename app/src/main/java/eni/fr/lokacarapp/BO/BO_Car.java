@@ -1,9 +1,6 @@
-package BO;
+package eni.fr.lokacarapp.BO;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import Entities.Car;
+import eni.fr.lokacarapp.Entities.Car;
 
 /**
  * Created by gpensec2015 on 03/05/2017.
@@ -19,9 +16,9 @@ public void AddCar(Car car) {
 
    /* JSONObject jsonObject = new JSONObject();
     try {
-        jsonObject.put("strPlaque", car.getStrPlaque());
+        jsonObject.put("strPlaque", car.getPlaque());
         jsonObject.put("strMarque", car.getStrMarque());
-        jsonObject.put("strModele", car.getStrModele());
+        jsonObject.put("strModele", car.getModele());
         jsonObject.put("nbPlaces", car.getNbPlaces());
         jsonObject.put("fPrixJour", car.getfPrixJour());
         jsonObject.put("agence", car.getAgence());

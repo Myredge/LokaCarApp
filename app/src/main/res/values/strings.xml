@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">LokaCarApp</string>
 
-    <!-- Strings related to login -->
+    <!-- Strings related to strLogin -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Mot de passe (optional)</string>
     <string name="action_sign_in">Connectez-vous</string>

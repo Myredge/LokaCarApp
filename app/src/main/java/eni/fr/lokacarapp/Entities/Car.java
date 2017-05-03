@@ -1,7 +1,4 @@
-package Entities;
-
-import android.os.Parcel;
-import android.os.Parcelable;
+package eni.fr.lokacarapp.Entities;
 
 import java.io.Serializable;
 
@@ -11,7 +8,7 @@ import java.io.Serializable;
 
 public class Car implements Serializable {
     private int nIdCar, nbPlaces;
-    private String strPlaque, strMarque, strModele;
+    private String strPlaque, strMarque, modele;
     private float fPrixJour;
     private boolean boolVille, boolFamiliale;
     private Agence agence;
@@ -32,12 +29,12 @@ public class Car implements Serializable {
         this.nbPlaces = nbPlaces;
     }
 
-    public String getStrPlaque() {
+    public String getPlaque() {
         return strPlaque;
     }
 
-    public void setStrPlaque(String strPlaque) {
-        this.strPlaque = strPlaque;
+    public void setPlaque(String plaque) {
+        this.strPlaque = plaque;
     }
 
     public String getStrMarque() {
@@ -48,12 +45,12 @@ public class Car implements Serializable {
         this.strMarque = strMarque;
     }
 
-    public String getStrModele() {
-        return strModele;
+    public String getModele() {
+        return modele;
     }
 
-    public void setStrModele(String strModele) {
-        this.strModele = strModele;
+    public void setModele(String modele) {
+        this.modele = modele;
     }
 
     public float getfPrixJour() {
@@ -89,11 +86,11 @@ public class Car implements Serializable {
     }
 
 
-    public Car(String strPlaque, String strMarque, String strModele, Float fPrixJour, boolean boolVille, boolean boolFamiliale, Agence agence)
+    public Car(String plaque, String strMarque, String strModele, Float fPrixJour, boolean boolVille, boolean boolFamiliale, Agence agence)
     {
-        this.strPlaque = strPlaque;
+        this.strPlaque = plaque;
         this.strMarque = strMarque;
-        this.strModele = strModele;
+        this.modele = strModele;
         this.fPrixJour = fPrixJour;
         this.boolVille = boolVille;
         this.boolFamiliale = boolFamiliale;

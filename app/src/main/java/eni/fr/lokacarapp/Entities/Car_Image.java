@@ -1,8 +1,6 @@
-package Entities;
+package eni.fr.lokacarapp.Entities;
 
 import android.media.Image;
-import android.os.Parcel;
-import android.os.Parcelable;
 
 import java.io.Serializable;
 
@@ -13,7 +11,7 @@ import java.io.Serializable;
 public class Car_Image implements Serializable{
 
     private Car car;
-    private String strNom;
+    private String strRemarque;
     private Image image;
 
 
@@ -25,12 +23,12 @@ public class Car_Image implements Serializable{
         this.car = car;
     }
 
-    public String getStrNom() {
-        return strNom;
+    public String getStrRemarque() {
+        return strRemarque;
     }
 
-    public void setStrNom(String strNom) {
-        this.strNom = strNom;
+    public void setStrRemarque(String strRemarque) {
+        this.strRemarque = strRemarque;
     }
 
     public Image getImage() {
@@ -41,9 +39,9 @@ public class Car_Image implements Serializable{
         this.image = image;
     }
 
-    public Car_Image(Car car, String strNom, Image image){
+    public Car_Image(Car car, String strRemarque, Image image){
         this.car = car;
-        this.strNom = strNom;
+        this.strRemarque = strRemarque;
         this.image = image;
 
     }
