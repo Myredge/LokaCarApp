@@ -4,40 +4,84 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.provider.ContactsContract;
 
+import java.io.Serializable;
+
 /**
  * Created by gpensec2015 on 03/05/2017.
  */
 
-public class Client implements Parcelable{
+public class Client implements Serializable{
 
     private String strNom, strPrenom, strAdresse, strVille, strTel;
     private int nIdClient, nCodePostale;
     private ContactsContract.CommonDataKinds.Email email;
 
 
-    protected Client(Parcel in) {
-        strNom = in.readString();
-        strPrenom = in.readString();
-        strAdresse = in.readString();
-        strVille = in.readString();
-        strTel = in.readString();
-        nIdClient = in.readInt();
-        nCodePostale = in.readInt();
+    public String getStrNom() {
+        return strNom;
     }
 
-    public static final Creator<Client> CREATOR = new Creator<Client>() {
-        @Override
-        public Client createFromParcel(Parcel in) {
-            return new Client(in);
-        }
+    public void setStrNom(String strNom) {
+        this.strNom = strNom;
+    }
 
-        @Override
-        public Client[] newArray(int size) {
-            return new Client[size];
-        }
-    };
+    public String getStrPrenom() {
+        return strPrenom;
+    }
 
-    public void Client(String strNom, String strPrenom, String strAdresse, String strVille, String strTel, int nCodePostale, ContactsContract.CommonDataKinds.Email email)
+    public void setStrPrenom(String strPrenom) {
+        this.strPrenom = strPrenom;
+    }
+
+    public String getStrAdresse() {
+        return strAdresse;
+    }
+
+    public void setStrAdresse(String strAdresse) {
+        this.strAdresse = strAdresse;
+    }
+
+    public String getStrVille() {
+        return strVille;
+    }
+
+    public void setStrVille(String strVille) {
+        this.strVille = strVille;
+    }
+
+    public String getStrTel() {
+        return strTel;
+    }
+
+    public void setStrTel(String strTel) {
+        this.strTel = strTel;
+    }
+
+    public int getnIdClient() {
+        return nIdClient;
+    }
+
+    public void setnIdClient(int nIdClient) {
+        this.nIdClient = nIdClient;
+    }
+
+    public int getnCodePostale() {
+        return nCodePostale;
+    }
+
+    public void setnCodePostale(int nCodePostale) {
+        this.nCodePostale = nCodePostale;
+    }
+
+    public ContactsContract.CommonDataKinds.Email getEmail() {
+        return email;
+    }
+
+    public void setEmail(ContactsContract.CommonDataKinds.Email email) {
+        this.email = email;
+    }
+
+    public Client(String strNom, String strPrenom, String strAdresse, String strVille, String strTel, int nCodePostale, ContactsContract.CommonDataKinds.Email email)
     {
         this.strNom = strNom;
         this.strPrenom = strPrenom;
@@ -48,20 +92,4 @@ public class Client implements Parcelable{
         this.email = email;
     }
 
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(strNom);
-        dest.writeString(strPrenom);
-        dest.writeString(strAdresse);
-        dest.writeString(strVille);
-        dest.writeString(strTel);
-        dest.writeInt(nIdClient);
-        dest.writeInt(nCodePostale);
-    }
 }

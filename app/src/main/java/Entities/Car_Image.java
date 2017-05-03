@@ -4,11 +4,13 @@ import android.media.Image;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
+
 /**
  * Created by gpensec2015 on 03/05/2017.
  */
 
-public class Car_Image implements Parcelable{
+public class Car_Image implements Serializable{
 
     private Car car;
     private String strNom;
@@ -39,35 +41,7 @@ public class Car_Image implements Parcelable{
         this.image = image;
     }
 
-    protected Car_Image(Parcel in) {
-        car = in.readParcelable(Car.class.getClassLoader());
-        strNom = in.readString();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeParcelable(car, flags);
-        dest.writeString(strNom);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Creator<Car_Image> CREATOR = new Creator<Car_Image>() {
-        @Override
-        public Car_Image createFromParcel(Parcel in) {
-            return new Car_Image(in);
-        }
-
-        @Override
-        public Car_Image[] newArray(int size) {
-            return new Car_Image[size];
-        }
-    };
-
-    public void Car_Image(Car car, String strNom, Image image){
+    public Car_Image(Car car, String strNom, Image image){
         this.car = car;
         this.strNom = strNom;
         this.image = image;

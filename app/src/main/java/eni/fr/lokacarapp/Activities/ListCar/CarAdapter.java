@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import Entities.Car;
 import eni.fr.lokacarapp.R;
@@ -42,7 +43,8 @@ public class CarAdapter extends ArrayAdapter<Car> {
             convertView = inflater.inflate(resId, null);
 
             viewHolder = new ViewHolder();
-            viewHolder.textViewMarqueModel = (TextView) convertView.findViewById(R.id.textViewItemMatriculation);
+            viewHolder.textViewItemPrice = (TextView) convertView.findViewById(R.id.textViewItemPrice);
+            viewHolder.textViewMarqueModel = (TextView) convertView.findViewById(R.id.textViewItemTitle);
             viewHolder.textViewItemImmatriculation = (TextView) convertView.findViewById(R.id.textViewItemImmatriculation);
 
             convertView.setTag(viewHolder);
@@ -54,6 +56,11 @@ public class CarAdapter extends ArrayAdapter<Car> {
 
 
         Car item = getItem(position);
+        try {
+            String price = item.getfPrixJour() + "/ j";
+            viewHolder.textViewItemPrice.setText(price);
+        }catch(Exception e){}
+
         viewHolder.textViewMarqueModel.setText(item.getStrMarque()+" "+item.getStrModele());
         viewHolder.textViewItemImmatriculation.setText(item.getStrPlaque());
 
@@ -61,7 +68,7 @@ public class CarAdapter extends ArrayAdapter<Car> {
     }
 
     class ViewHolder{
-        TextView textViewMarqueModel, textViewItemImmatriculation;
+        TextView textViewMarqueModel, textViewItemImmatriculation, textViewItemPrice;
 
     }
 }

@@ -3,11 +3,13 @@ package Entities;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
+
 /**
  * Created by gpensec2015 on 03/05/2017.
  */
 
-public class Car implements Parcelable{
+public class Car implements Serializable {
     private int nIdCar, nbPlaces;
     private String strPlaque, strMarque, strModele;
     private float fPrixJour;
@@ -87,48 +89,7 @@ public class Car implements Parcelable{
     }
 
 
-
-    protected Car(Parcel in) {
-        nIdCar = in.readInt();
-        nbPlaces = in.readInt();
-        strPlaque = in.readString();
-        strMarque = in.readString();
-        strModele = in.readString();
-        fPrixJour = in.readFloat();
-        boolVille = in.readByte() != 0;
-        boolFamiliale = in.readByte() != 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(nIdCar);
-        dest.writeInt(nbPlaces);
-        dest.writeString(strPlaque);
-        dest.writeString(strMarque);
-        dest.writeString(strModele);
-        dest.writeFloat(fPrixJour);
-        dest.writeByte((byte) (boolVille ? 1 : 0));
-        dest.writeByte((byte) (boolFamiliale ? 1 : 0));
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Creator<Car> CREATOR = new Creator<Car>() {
-        @Override
-        public Car createFromParcel(Parcel in) {
-            return new Car(in);
-        }
-
-        @Override
-        public Car[] newArray(int size) {
-            return new Car[size];
-        }
-    };
-
-    public void Car(String strPlaque, String strMarque, String strModele, Float fPrixJour, boolean boolVille, boolean boolFamiliale, Agence agence)
+    public Car(String strPlaque, String strMarque, String strModele, Float fPrixJour, boolean boolVille, boolean boolFamiliale, Agence agence)
     {
         this.strPlaque = strPlaque;
         this.strMarque = strMarque;

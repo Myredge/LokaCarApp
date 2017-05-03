@@ -3,13 +3,14 @@ package Entities;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by gpensec2015 on 03/05/2017.
  */
 
-public class Location implements Parcelable{
+public class Location implements Serializable{
 
     private Agence agence;
     private Car car;
@@ -57,31 +58,12 @@ public class Location implements Parcelable{
         this.dateFinLocation = dateFinLocation;
     }
 
-    protected Location(Parcel in) {
-        car = in.readParcelable(Car.class.getClassLoader());
-        client = in.readParcelable(Client.class.getClassLoader());
+
+    public Location(Agence agence, Car car, Client client, Date dateDebutLocation, Date dateFinLocation) {
+        this.agence = agence;
+        this.car = car;
+        this.client = client;
+        this.dateDebutLocation = dateDebutLocation;
+        this.dateFinLocation = dateFinLocation;
     }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeParcelable(car, flags);
-        dest.writeParcelable(client, flags);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    public static final Creator<Location> CREATOR = new Creator<Location>() {
-        @Override
-        public Location createFromParcel(Parcel in) {
-            return new Location(in);
-        }
-
-        @Override
-        public Location[] newArray(int size) {
-            return new Location[size];
-        }
-    };
 }
