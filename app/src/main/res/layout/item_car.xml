@@ -41,7 +41,7 @@
         tools:text="Item name" />
 
     <TextView
-        android:id="@+id/textViewItemMatriculation"
+        android:id="@+id/textViewItemImmatriculation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/textViewItemTitle"
