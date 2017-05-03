@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    //Nom du client
+    <!--Nom du client-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:hint="Saisir le nom"/>
     </LinearLayout>
 
-    //Prénom du client
+    <!--Prénom du client-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:hint="Saisir le prénom"/>
     </LinearLayout>
-    //Adresse du client
+    <!--Adresse du client-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:hint="Saisir la rue"/>
     </LinearLayout>
-    //Ville du client
+    <!--Ville du client-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:hint="Saisir la ville"/>
     </LinearLayout>
-    //Code Postale
+    <!--Code Postale-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:hint="Saisir le code"/>
     </LinearLayout>
-    //Email
+    <!--Email-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
             android:hint="Saisir le mail"/>
 
     </LinearLayout>
-    //Numéro de Tel
+    <!--Numéro de Tel-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -139,7 +139,7 @@
             android:hint="Saisir le numéro"/>
 
     </LinearLayout>
-    //Les bouttons
+    <!--Les bouttons-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="109dp"
