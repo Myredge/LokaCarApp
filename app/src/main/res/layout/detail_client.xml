@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    //Nom du client
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/strNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Nom du client: "/>
+
+        <EditText
+            android:id="@+id/editStrNom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saisir le nom"/>
+    </LinearLayout>
+
+    //Prénom du client
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/strPrenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Prénom du client: "/>
+
+        <EditText
+            android:id="@+id/editStrPrenom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saisir le prénom"/>
+    </LinearLayout>
+    //Adresse du client
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/strAdresse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Rue du client: "/>
+
+        <EditText
+            android:id="@+id/editStrAdresse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saisir la rue"/>
+    </LinearLayout>
+    //Ville du client
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/strVille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Ville du client: "/>
+
+        <EditText
+            android:id="@+id/editStrVille"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saisir la ville"/>
+    </LinearLayout>
+    //Code Postale
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/strCodePostale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Code Postale: "/>
+
+        <EditText
+            android:id="@+id/editStrCodePostale"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saisir le code"/>
+    </LinearLayout>
+    //Email
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/strEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Adresse Email: "/>
+
+        <EditText
+            android:id="@+id/editStrmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saisir le mail"/>
+
+    </LinearLayout>
+    //Numéro de Tel
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/strTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Numéro de Téléphone: "/>
+
+        <EditText
+            android:id="@+id/editStrTel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saisir le numéro"/>
+
+    </LinearLayout>
+    //Les bouttons
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="109dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enregistrer"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Annuler"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
